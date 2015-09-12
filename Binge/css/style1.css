@@ -10,14 +10,40 @@
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:url('../fonts/icomoon/icomoon.eot');
-  src:url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.woff') format('woff'),
-    url('../fonts/icomoon/icomoon.ttf') format('truetype'),
-    url('../fonts/icomoon/icomoon.svg#icomoon') format('svg');
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
 *, *:after, *:before {
@@ -428,9 +454,17 @@ button:focus {
   padding: 2em 1em;
 }
 
+.sidebar h2 {
+  margin: 1em 0 0;
+  font-size: 1em;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  color: #c2c2c2;
+}
+
 .sidebar h1 {
   margin: 0.75em 0 0;
-  font-size: 2em;
+  font-size: 2.5em;
   line-height: 1;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
@@ -440,97 +474,7 @@ button:focus {
   display: block;
 }
 
-/* Codrops links */
-.codrops-links {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  min-height: 45px;
-}
 
-.codrops-links::after {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: #ddd;
-  content: '';
-  -webkit-transform: rotate3d(0, 0, 1, 22.5deg);
-  transform: rotate3d(0, 0, 1, 22.5deg);
-}
-
-.codrops-icon {
-  display: inline-block;
-  margin: 0.5em;
-  padding: 0em 0;
-  width: 1.5em;
-  text-decoration: none;
-}
-
-.codrops-icon span {
-  display: none;
-}
-
-.codrops-icon:before {
-  margin: 0 5px;
-  text-transform: none;
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-family: 'codropsicons';
-  line-height: 1;
-  speak: none;
-}
-
-.codrops-icon--drop:before {
-  content: "\e001";
-}
-
-.codrops-icon--prev:before {
-  content: "\e004";
-}
-
-/* Demo links */
-.codrops-demos {
-  margin: 2em 0 0;
-  font-size: 0.75em;
-}
-
-.codrops-demos a {
-  display: inline-block;
-  margin: 0 0.5em;
-}
-
-.codrops-demos a.current-demo {
-  color: #333;
-  font-weight: bold;
-}
-
-.codrops-demos a.current-demo:focus {
-  color: #aaa;
-}
-
-.related {
-  font-size: 0.85em;
-  padding-bottom: 1em;
-}
-
-.related h3 {
-  margin: 3em 0 0.5em 0;
-  font-size: 0.95em;
-}
-
-.related a {
-  display: block;
-  color: inherit;
-}
-
-.related a:hover,
-.related a:focus {
-  color: #414741;
-}
 
 /* Main content */
 .main {
@@ -546,7 +490,7 @@ button:focus {
 /* Overlay */
 .grid::after {
   content: '';
-  background: rgba(202, 202, 202, 0.4);
+  background: rgba(202, 202, 202, 1);
   opacity: 0;
   position: absolute;
   pointer-events: none;
@@ -640,7 +584,7 @@ button:focus {
   font-size: 0.75em;
   margin-left: auto;
 }
-
+/*
 .dropdown {
   font-weight: bold;
   margin-left: 5px;
@@ -653,6 +597,7 @@ button:focus {
   margin-left: 2px;
   font-size: 80%;
 }
+*/
 
 /*Search Bar*/
 .sb-search {
@@ -740,7 +685,7 @@ input[type="search"].sb-search-input {
   background: #06315a;
   z-index: 90;
   font-size: 22px;
-  font-family: 'icomoon';
+  font-family: 'material-icons';
   speak: none;
   font-style: normal;
   font-weight: normal;
